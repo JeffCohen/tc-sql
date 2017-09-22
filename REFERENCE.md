@@ -24,15 +24,15 @@ SELECT
 Example:
 
 ``` sql
-SELECT FirstName, LastName FROM Customers WHERE LastName = 'Smith'
-SELECT Product, SUM(SalesAmt) FROM Sales GROUP BY Product
+SELECT FirstName, LastName FROM Customers WHERE LastName = 'Smith';
+SELECT Product, SUM(SalesAmt) FROM Sales GROUP BY Product;
 ```
 
 A special note about searching for substrings: you can use the `LIKE` operator
 combined with `%` wildcard characters:
 
 ``` sql
-SELECT FirstName, LastName FROM Customers WHERE LastName LIKE '%mit%'
+SELECT FirstName, LastName FROM Customers WHERE LastName LIKE '%mit%';
 ```
 
 ### CREATE TABLE
@@ -54,7 +54,7 @@ CREATE TABLE [IF NOT EXISTS] table-name
 Example:
 
 ``` sql
-CREATE TABLE Customers (ID PRIMARY KEY AUTO_INCREMENT, FirstName TEXT, LastName TEXT)
+CREATE TABLE Customers (ID PRIMARY KEY AUTO_INCREMENT, FirstName TEXT, LastName TEXT);
 ```
 Need to delete an entire table including its schema definition? `DROP TABLE [tablename]`.
 
@@ -71,7 +71,7 @@ INSERT [INTO] table-name
 Example:
 
 ```
-INSERT INTO Customers (FirstName, LastName) VALUES ("Cookie", "Monster"), ("Big", "Bird")
+INSERT INTO Customers (FirstName, LastName) VALUES ("Cookie", "Monster"), ("Big", "Bird");
 ```
 
 ### DELETE
@@ -88,7 +88,7 @@ DELETE FROM tbl_name
 Example:
 
 ``` sql
-DELETE FROM Customers WHERE LastName = 'Monster'
+DELETE FROM Customers WHERE LastName = 'Monster';
 ```
 
 
@@ -107,9 +107,9 @@ Example:
 
 ``` sql
 
-UPDATE Customers SET CreditCard = "1234" WHERE LastName = "Smith"
+UPDATE Customers SET CreditCard = "1234" WHERE LastName = "Smith";
 
-UPDATE Customers SET LastModified = NOW() WHERE id > 10000
+UPDATE Customers SET LastModified = NOW() WHERE id > 10000;
 ```
 
 ## Aggregation Functions
